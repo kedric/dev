@@ -1,17 +1,15 @@
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
-  int i;
-
-  i = 0;
+  int i = 0;
+  
   while(i < 10)
     {
-      ft_putchar('0' + i);
+      ft_putchar(48 + i);
       i++;
     }
-  ft_putchar('\n');
 }
 
-int main(void)
+int	main()
 {
   ft_print_numbers();
 }
