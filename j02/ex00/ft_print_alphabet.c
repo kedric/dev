@@ -1,18 +1,15 @@
-void ft_print_alphabet(void)
+void	ft_print_alphabet(void)
 {
-  int i;
+  int i = 0;
 
-  i = 0;
-  while(i < 26)
-  {
-    ft_putchar(i + 'a');
-    i++;
-  }
-  ft_putchar('\n');  
+  while ( i < 26 )
+	{
+	  ft_putchar(97 + i);
+	  i++;
+	}
 }
 
-int main(void)
+int	main()
 {
   ft_print_alphabet();
-  return(0);
 }
