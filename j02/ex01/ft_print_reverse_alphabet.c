@@ -1,18 +1,15 @@
-void ft_print_reverse_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
-  int i;
+  int i = 25;
 
-  i = 0;
-  while(i < 26)
-    {
-      ft_putchar('z' - i);
-      i++;
-    }
-  ft_putchar('\n');
+    while(i >= 0)
+      {
+	ft_putchar(97 + i);
+	i--;
+      }
 }
 
-int main()
+int	main()
 {
   ft_print_reverse_alphabet();
-  return(0);
 }
