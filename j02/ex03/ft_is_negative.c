@@ -1,23 +1,15 @@
-void ft_putchar(char c);
-
-void ft_is_negative(int a)
+void	ft_is_negative(int n)
 {
-  if(a >= 0)
+  if(n >= 0)
     {
       ft_putchar('P');
-      ft_putchar('\n');
     }
-  else if(a < 0)
+  else
     {
       ft_putchar('N');
-      ft_putchar('\n');
     }
 }
-
-int main(void)
+int	main()
 {
- ft_is_negative(5);
-  ft_is_negative(-5);
-  ft_is_negative(0);
-  return(0);
+  ft_is_negative(3);
 }
