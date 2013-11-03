@@ -1,40 +1,41 @@
-void ft_putnbr(int i);
-void ft_putchar(char c);
-
-void ft_format(int a, int b)
+void	ft_affiche(int n, int j)
 {
- 	      ft_putnbr(a / 10);
-	      ft_putnbr(a % 10);
-	      ft_putchar(' ');
-	      ft_putnbr(b / 10);
-	      ft_putnbr(b % 10);
-	      ft_putchar(',');
-	      ft_putchar(' ');
-}
-
-void ft_print_comb2(void)
-{
-  int a;
-  int b;
-
-  a = 0;
-  while(a < 99)
+  ft_putchar('0' + n / 10);
+  ft_putchar('0' + n % 10);
+  ft_putchar(' ');
+  ft_putchar('0' + j / 10);
+  ft_putchar('0' + j % 10);
+  if(n != 98)
     {
-      b = 0;
-      while(b < 100)
-	{
-	  if(a < b && (a != 98 && b != 99))
-	    {
-	      ft_format(a,b);
-	    }
-	  else if( a == 98 && b == 99)
-	    {
-	      ft_putnbr(a);
-	      ft_putchar(' ');
-	      ft_putnbr(b);	      
-	    }
-	  b++;
-	}
-      a++;
+      ft_putchar(',');
+      ft_putchar(' ');
     }
+  else
+    {
+      ft_putchar('\n');
+    }
+}
+void	ft_print_comb2(void)
+{
+  int i[2];
+
+  i[0] = 0;
+  
+  while(i[0] < 99)
+    {
+      i[1] = 0;
+      while(i[1] <= 99)
+	{
+	  if (i[0] < i[1])
+ 	    {
+	      ft_affiche(i[0],i[1]);
+ 	    }
+	  i[1]++;
+	 }
+      i[0]++;
+    }
+}
+int	main()
+{
+  ft_print_comb2();
 }

@@ -1,22 +1,17 @@
-void ft_putchar(char c);
-
-void ft_putnbr(int i)
+void	ft_putnbr(int n)
 {
-  if(i >= 0)
+  if( n < 10 && n > 0)
     {
-      if(i >= 10)
-	{
-	  ft_putnbr(i / 10);
-	  ft_putchar(i % 10 + '0');
-	}
-      else
-	{
-	  ft_putchar('0' + i);
-	}
+      ft_putchar('0' + n);
     }
-  else
+  else if( n > 10)
+    {
+      ft_putnbr(n / 10);
+      ft_putchar('0' + n % 10);
+    }
+  else if(n < 0)
     {
       ft_putchar('-');
-      ft_putnbr(-i);
+      ft_putnbr(-n);
     }
 }
