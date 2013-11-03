@@ -16,6 +16,10 @@ void	ft_print_comb(void)
 	      ft_putchar(' ');
 	      ft_putchar(';');
 	    }
+	  else
+	    {
+	      ft_putchar('\n');
+	    }
 	}
       i++;
     }
