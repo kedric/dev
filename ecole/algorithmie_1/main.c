@@ -12,9 +12,7 @@ void test_tolower()
   b[3] = ft_tolower(a[3]);
   b[4] = ft_tolower(a[4]);
   b[5] = '\0';
-  puts(a);
-  puts(b);
- 
+  printf("%s > %s\n",a,b); 
 }
 
 int main()
