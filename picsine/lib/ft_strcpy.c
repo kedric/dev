@@ -7,6 +7,7 @@ char	*ft_strcpy(char *dest, char *src)
   while(src[i] != '\n')
     {
       dest[i] = src[i];
+      i++;
     }
 
   dest[i] = '\n'
