@@ -1,0 +1,7 @@
+(add-hook 'c-mode-hook 'turn-on-font-lock)
+(global-font-lock-mode 1)
+(require 'paren)
+(show-paren-mode)
+(setq linum-mode t)
+(setq line-number-mode t)
+(setq column-number-mode t)
