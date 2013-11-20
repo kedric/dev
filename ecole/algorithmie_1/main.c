@@ -1,4 +1,28 @@
 #include <stdio.h>
+
+void test_isalpha()
+{
+  puts("test ft_isalpha :");
+  putchar('0' + ft_isalpha('a'));
+  putchar(' ');
+  putchar('0' + ft_isalpha('Z'));
+  putchar(' ');
+  putchar('0' + ft_isalpha('_'));
+  putchar('\n');
+  
+}
+
+void test_isdigit()
+{
+  puts("test ft_isdigit :");
+  putchar('0' + ft_isdigit('0'));
+  putchar(' ');
+  putchar('0' + ft_isdigit('2'));
+  putchar(' ');
+  putchar('0' + ft_isdigit('a'));
+  putchar('\n');
+}
+
 void test_isalnum()
 {
   puts("test ft_isalnum :");
@@ -66,4 +90,6 @@ int main()
   test_isprint();
   test_isascii();
   test_isalnum();
+  test_isdigit();
+  test_isalpha();
 }
