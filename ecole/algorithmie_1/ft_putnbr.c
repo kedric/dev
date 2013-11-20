@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:11:48 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 12:27:29 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 13:11:41 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/20 13:12:19 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isascii(int c)
+void	ft_putchar(char c);
+
+void	ft_putnbr(int i)
 {
-	if(c >= 0 && c <= 127)
+	if(i >= 0)
 	{
-		return 1;
+		if(i >= 10)
+		{
+			ft_putnbr(i / 10);
+			ft_putchar(i % 10 + '0');
+		}
+		else
+		{
+			ft_putchar('0' + i);
+		}
 	}
 	else
 	{
-		return 0;
+		ft_putchar('-');
+		ft_putnbr(-i);
 	}
 }

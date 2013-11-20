@@ -1,5 +1,21 @@
 #include <stdio.h>
+void test_strcmp()
+{
+	char *a;
+	char *b;
 
+	a = "salut";
+	b = a;
+
+	puts("test ft_strcmp :");
+	ft_putnbr(ft_strcmp(a,b));
+	ft_putchar(' ');
+	a = "salut";
+	b = "bonjour";
+	ft_putnbr(ft_strcmp(a,b));
+	putchar('\n');
+
+}
 void test_isalpha()
 {
   puts("test ft_isalpha :");
@@ -38,14 +54,14 @@ void test_isascii()
   puts("test ft_isascii :");
   putchar('0' + ft_isascii('a'));
   putchar(' ');
-  putchar('0' + ft_isascii('@'));
+  putchar('0' + ft_isascii(128));
    putchar('\n');
 } 
 void test_isprint()
 {
   
   puts("test ft_isprint :");
-  putchar(ft_isprint('i') + '0');
+  putchar(ft_isprint(' ') + '0');
   putchar(' ');
   putchar(ft_isprint('\n') + '0');
   putchar('\n');
@@ -54,7 +70,7 @@ void test_isprint()
 void test_toupper()
 {
   char *a;
-  char *b;
+  char b[6];
 
   a = "sauZ2";
   b[0] = ft_toupper(a[0]);
@@ -70,7 +86,7 @@ void test_toupper()
 void test_tolower()
 {
   char *a;
-  char *b;
+  char b[6];
 
   a = "SAUz2";
   b[0] = ft_tolower(a[0]);
@@ -85,11 +101,13 @@ void test_tolower()
 
 int main()
 {
-  test_tolower();
-  test_toupper();
-  test_isprint();
-  test_isascii();
-  test_isalnum();
-  test_isdigit();
-  test_isalpha();
+	test_strcmp();
+
+	test_tolower();
+	test_toupper();
+	test_isprint();
+	test_isascii();
+	test_isalnum();
+	test_isdigit();
+	test_isalpha();
 }
