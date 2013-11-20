@@ -1,4 +1,21 @@
 #include <stdio.h>
+void test_isascii()
+{
+  puts("test ft_isascii :");
+  putchar('0' + ft_isascii('a'));
+  putchar(' ');
+  putchar('0' + ft_isascii('@'));
+  putchar('\n');
+}
+void test_isprint()
+{
+  
+  puts("test ft_isprint :");
+  putchar(ft_isprint('i') + '0');
+  putchar(' ');
+  putchar(ft_isprint('\n') + '0');
+  putchar('\n');
+}
 
 void test_toupper()
 {
@@ -15,7 +32,6 @@ void test_toupper()
   puts("test ft_toupper :");
   printf("%s > %s\n",a,b);
 }
-
 
 void test_tolower()
 {
@@ -37,5 +53,6 @@ int main()
 {
   test_tolower();
   test_toupper();
-ls
+  test_isprint();
+  test_isascii();
 }
