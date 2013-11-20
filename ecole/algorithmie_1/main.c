@@ -1,4 +1,78 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+void test_strstr()
+{
+	char *a;
+	char *b;
+
+	a = "salut tu va bien";
+	b = "tu";
+	ft_putstr("test ft_strstr\n");
+	a = ft_strstr(a,b);
+	ft_putstr(a);
+	ft_putchar('\n');
+}
+void test_strlen()
+{
+	char *a;
+
+	a = "salut";
+	ft_putstr("test ft_strlen :\n");
+	ft_putnbr(ft_strlen(a));
+	ft_putchar('\n');
+}
+void test_strncpy()
+{
+	ft_putstr("test ft_strncpy :\n");
+	char *s2;
+	char *s1;
+	
+	s1 = malloc(20 *sizeof(char));
+	s2 = "salut";
+	s1 = strncpy(s1,s2, 2);
+	ft_putstr(s1);
+	ft_putchar('\n');
+	
+}
+void test_strcpy()
+{
+	ft_putstr("test ft_strcpy :\n");
+	char *s2;
+	char *s1;
+	
+	s1 = malloc(20 *sizeof(char));
+	s2 = "salut";
+	s1 = strcpy(s1,s2);
+	ft_putstr(s1);
+	ft_putchar('\n');
+}
+void test_putnbr()
+{
+	ft_putstr("\ntest ft_putnbr :\n");
+	ft_putnbr(72);
+	ft_putchar(' ');
+	ft_putnbr(-150);
+	ft_putchar('\n');
+}
+void test_putstr()
+{
+	char *a;
+
+	a = "salut comment tu va";
+
+	puts("test ft_putstr :");
+ 	ft_putstr(a);
+}
+
+void test_putchar()
+{
+	puts("test ft_putchar :");
+ 	ft_putchar('a');
+ 	ft_putchar('c');
+ 	ft_putchar('*');
+	ft_putchar('\n');
+} 
 void test_strcmp()
 {
 	char *a;
@@ -7,7 +81,7 @@ void test_strcmp()
 	a = "salut";
 	b = a;
 
-	puts("test ft_strcmp :");
+ 	puts("test ft_strcmp :");
 	ft_putnbr(ft_strcmp(a,b));
 	ft_putchar(' ');
 	a = "salut";
@@ -101,8 +175,6 @@ void test_tolower()
 
 int main()
 {
-	test_strcmp();
-
 	test_tolower();
 	test_toupper();
 	test_isprint();
@@ -110,4 +182,12 @@ int main()
 	test_isalnum();
 	test_isdigit();
 	test_isalpha();
+	test_strstr();
+	test_strcmp();
+	test_strncpy();
+	test_strcpy();
+	test_strlen();
+	test_putchar();
+	test_putstr();
+	test_putnbr();
 }

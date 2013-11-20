@@ -6,10 +6,12 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 12:13:51 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 12:15:41 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/20 16:56:31 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int		ft_verif(char *str, char *to_find)
+#include <stdlib.h>
+
+int		ft_verif(const char *str, const char *to_find)
 {
 	int i = 0;
 
@@ -27,19 +29,23 @@ int		ft_verif(char *str, char *to_find)
 	}
 }
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *s1,const char *s2)
 {
 	int	i;
 	int	match;
+	int r;
+	char *result;
 
 	i = 0;
+	r = 0;
 	match = 0;
+	result = s1
 
-	while(str[i] != '\0' || match != 1)
+	while(s1[i] != '\0' && match != 1 || match != 1)
 	{
-		if (str[i] == to_find[0])
+		if (s1[i] == s2[0])
 		{
-			match = ft_verif(str + i, to_find);
+			match = ft_verif(s1 + i, s2);
 		}
 		if(match != 1)
 		{
@@ -48,10 +54,15 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	if (match == 1)
 	{
-		return str + i;
+		while(s1[i] != '\0')
+		{
+			result[r] = s1[i];
+			r++;
+		}
+		return result;
 	}
 	else 
 	{
-		return 0;
+		return (0);
 	}
 }
