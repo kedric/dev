@@ -1,12 +1,22 @@
 #include <stdio.h>
+void test_isalnum()
+{
+  puts("test ft_isalnum :");
+  putchar('0' + ft_isalnum('a'));
+  putchar(' ');
+  putchar('0' + ft_isalnum('2'));
+  putchar(' ');
+  putchar('0' + ft_isalnum('@'));
+  putchar('\n');
+}
 void test_isascii()
 {
   puts("test ft_isascii :");
   putchar('0' + ft_isascii('a'));
   putchar(' ');
   putchar('0' + ft_isascii('@'));
-  putchar('\n');
-}
+   putchar('\n');
+} 
 void test_isprint()
 {
   
@@ -55,4 +65,5 @@ int main()
   test_toupper();
   test_isprint();
   test_isascii();
+  test_isalnum();
 }
