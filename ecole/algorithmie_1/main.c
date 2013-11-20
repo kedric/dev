@@ -1,7 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-void test_strstr()
+void *ft_memset(void *s, int c, size_t n);
+void	test_memset()
+{
+	char *a;
+	char *b;
+
+	puts("test ft_memset :\n");
+	a = "salut";
+	puts("test ft_memset :\n");
+	a = memset(a,47,2);
+	ft_putstr(a);
+	ft_putchar('\n');
+}
+void	test_strncmp()
+{
+	char *a;
+	char *b;
+
+	a = "salut";
+	b = a;
+
+ 	puts("test ft_strncmp :");
+	ft_putnbr(ft_strncmp(a,b,2));
+	ft_putchar(' ');
+	a = "salut";
+	b = "bonjour";
+	ft_putnbr(ft_strncmp(a,b,2));
+	putchar('\n');
+}
+
+/*void test_strstr()
 {
 	char *a;
 	char *b;
@@ -12,7 +42,8 @@ void test_strstr()
 	a = ft_strstr(a,b);
 	ft_putstr(a);
 	ft_putchar('\n');
-}
+	}*/
+
 void test_strlen()
 {
 	char *a;
@@ -182,11 +213,13 @@ int main()
 	test_isalnum();
 	test_isdigit();
 	test_isalpha();
-	test_strstr();
+//	test_strstr();
+	test_strncmp();
 	test_strcmp();
 	test_strncpy();
 	test_strcpy();
 	test_strlen();
+	test_memset();
 	test_putchar();
 	test_putstr();
 	test_putnbr();
