@@ -6,7 +6,7 @@ int	ft_verif(char *str, char *to_find)
     {
       i++;
     }
-  if (to_find == '\0')
+  if (to_find[i] == '\0')
     {
       return 1;
     }
@@ -27,7 +27,7 @@ char	*ft_strstr(char *str, char *to_find)
     {
       if (str[i] == to_find[0])
 	{
-	 match = ft_verif(str[i], to_find);
+	 match = ft_verif(str + i, to_find);
 	}
       if(match != 1)
 	{
@@ -36,7 +36,7 @@ char	*ft_strstr(char *str, char *to_find)
     }
   if (match == 1)
     {
-      return str[i];
+      return str + i;
     }
   else 
     {
