@@ -2,15 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 void *ft_memset(void *s, int c, size_t n);
+
 void	test_memset()
 {
 	char *a;
-	char *b;
 
-	puts("test ft_memset :\n");
 	a = "salut";
 	puts("test ft_memset :\n");
-	a = memset(a,47,2);
+	memset(a,'a',2);
 	ft_putstr(a);
 	ft_putchar('\n');
 }
