@@ -6,7 +6,7 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 21:37:01 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/21 18:41:58 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/21 19:47:06 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -17,7 +17,7 @@ void *ft_memset(void *s, int c, size_t n)
 
 	while(i <= n)
 	{
-		((int *)s)[i] = c; 
+		*((char *)s+i) = c; 
 		i++;
 	}
 	return (s);
