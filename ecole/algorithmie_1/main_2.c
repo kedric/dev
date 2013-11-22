@@ -738,7 +738,7 @@ char	uf_strmapi_callback(unsigned int i, char s)
 	return (1);
 	}*/
 
-									/*int	uf_test_memcpy(void)
+int	uf_test_memcpy(void)
 {
 	int	tab[9];
 	int	tab2[9];
@@ -762,8 +762,8 @@ char	uf_strmapi_callback(unsigned int i, char s)
 	memcpy(tab + 1, cpy, sizeof(cpy));
 	if (memcmp(tab, tab2, sizeof(tab)) != 0)
 		D_ERROR
-	return (1);
-	}*/
+		return (1);
+}
 
 int	uf_test_memset(void)
 {
@@ -817,7 +817,7 @@ int	uf_test_memset(void)
 	if (memcmp(ctab, ctab2, sizeof(ctab)) != 0)
 		D_ERROR
 	return (1);
-	}*/
+}*/
 
 void	uf_add_test(t_test *test, const char *name, int (*funct)(void))
 {
@@ -837,9 +837,9 @@ int		main(int argc, const char **argv)
 	i = 0;
 	memset(test, 0, D_TEST);
 	uf_add_test(test, "memset", uf_test_memset);
-/*	uf_add_test(test, "bzero", uf_test_bzero);
+//	uf_add_test(test, "bzero", uf_test_bzero);
 	uf_add_test(test, "memcpy", uf_test_memcpy);
-	uf_add_test(test, "memccpy", uf_test_memccpy);
+/*	uf_add_test(test, "memccpy", uf_test_memccpy);
 	uf_add_test(test, "memmove", uf_test_memmove);
 	uf_add_test(test, "memchr", uf_test_memchr);
 	uf_add_test(test, "memcmp", uf_test_memcmp);
