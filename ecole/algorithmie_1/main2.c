@@ -12,7 +12,7 @@
 #include <ctype.h>
 #include <time.h>
  
-#include "libft.h" /* compile with -I./ */
+#include "./reverifier/libft.h" /* compile with -I./ */
 #define D_ERROR { printf("Error Line %d, Funct %s ", __LINE__ - 1, __func__); return (0); }
  
 #define D_TEST  50
@@ -709,7 +709,7 @@ int     uf_test_strlen(void)
                 D_ERROR
 					return (1);
 }
-/* 
+ 
 int     uf_test_memmove(void)
 {
 	char    str[] = "memmove can be very useful......";
@@ -743,7 +743,7 @@ int     uf_test_memchr(void)
                 D_ERROR
 					return (1);
 }
- 
+/* 
 int     uf_test_memcmp(void)
 {
 	char    tab[11] = "Hello boys\0";
@@ -973,8 +973,8 @@ int             main(int argc, const char **argv)
 	uf_add_test(test, "bzero", uf_test_bzero);
 	uf_add_test(test, "memcpy", uf_test_memcpy);
 	uf_add_test(test, "memccpy", uf_test_memccpy);
-//	uf_add_test(test, "memmove", uf_test_memmove);
-//	uf_add_test(test, "memchr", uf_test_memchr);
+	uf_add_test(test, "memmove", uf_test_memmove);
+	uf_add_test(test, "memchr", uf_test_memchr);
 //	uf_add_test(test, "memcmp", uf_test_memcmp);
 	uf_add_test(test, "strlen", uf_test_strlen);
 //	uf_add_test(test, "strdup", uf_test_strdup);

@@ -6,10 +6,11 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 20:19:29 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 21:30:56 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 00:14:53 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
+#include "libft.h"
 
 void    *ft_memmove (void *s1, const void *s2, size_t n)
 {
