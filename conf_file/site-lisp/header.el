@@ -22,7 +22,7 @@
 ;    By: login____ <mail_______@student.42.fr>      +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: yyyy/mm/dd 15:27:11 by login____         #+#    #+#              ;
-;    Updated: yyyy/mm/dd 15:27:11 by login____        ###   ########.fr        ;
+;    Updated: 2013/11/20 18:48:47 by pi               ###   ########.fr        ;
 ;                                                                              ;
 ;******************************************************************************;
 
@@ -105,19 +105,19 @@
 (defun header-make-by ()
   "Creates the 'By: login <mail>' entry of the header."
   (let* ((mail-span (- info-std-width (+ (length user-login) 7)))
-		 (by (concat "By: " user-login " <" (header-chop-str user-mail mail-span) ">"))
+		 (by (concat "By: jmancero <jmancero@student.42.fr>"))
 		 (fill (string-fill (- info-std-width (string-length by)))))
 	(concat by fill))
   )
 
 (defun header-make-creation-date ()
   "Creates the 'Created: yyyy/mm/dd hh:mm:ss' entry of the header.'"
-  (concat "Created: " (format-time-string "%Y/%m/%d %T") " by " user-login)
+  (concat "Created: " (format-time-string "%Y/%m/%d %T") " by jmancero")
   )
 
 (defun header-make-update-date ()
   "Creates the 'Updated: yyyy/mm/dd hh:mm:ss' entry of the header.'"
-  (concat "Updated: " (format-time-string "%Y/%m/%d %T") " by " user-login)
+  (concat "Updated: " (format-time-string "%Y/%m/%d %T") " by jmancero")
   )
 
 

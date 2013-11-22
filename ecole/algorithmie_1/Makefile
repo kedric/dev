@@ -6,7 +6,7 @@
 #    By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 17:04:18 by jmancero          #+#    #+#              #
-#    Updated: 2013/11/20 17:43:41 by jmancero         ###   ########.fr        #
+#    Updated: 2013/11/20 20:48:21 by jmancero         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 NAME = libft.a
@@ -23,6 +23,7 @@ SOURCE = 	ft_isalnum.c \
 			ft_strcpy.c \
 			ft_strlen.c \
 			ft_strncpy.c \
+			ft_strncmp.c \
 			ft_tolower.c \
 			ft_toupper.c \
 
