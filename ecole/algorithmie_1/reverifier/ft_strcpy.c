@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:04:42 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 13:45:24 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 12:13:02 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:27:19 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <string.h>
 
-void	ft_putstr(char *str)
+char	*ft_strcpy(char *s1, const char *s2)
 {
 	int	i;
 
 	i = 0;
 
-	while(str[i] != '\0')
+	while (s2[i] != '\0')
 	{
-		write (1, &str[i], 1);
+		s1[i] = s2[i];
 		i++;
 	}
+
+	s1[i] = '\0';
+
+	return (s1);
 }

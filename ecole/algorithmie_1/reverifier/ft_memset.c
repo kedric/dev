@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:01:34 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 12:02:31 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 21:37:01 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 16:11:24 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalnum(int c)
+#include <string.h>
+
+void *ft_memset(void *s, int c, size_t n)
 {
-	if((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	int	i;
+
+	i = 0;
+	if (s != 0)
 	{
-		return 1;
+		while(i < n)
+		{
+			*((char *)s+i) = c; 
+			i++;
+		}
 	}
-	else
-    {
-		return 0;
-	}
+	return (s);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 21:37:01 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 09:34:14 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 12:04:42 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:13:40 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include <unistd.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void	ft_putstr(char const *s)
 {
 	int	i;
 
 	i = 0;
-	while(i <= n)
+
+	while(s[i] != '\0')
 	{
-		*((char *)s+i) = c; 
+		write (1, &s[i], 1);
 		i++;
 	}
-	return (s);
 }

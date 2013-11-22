@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:10:48 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 12:11:15 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 12:02:53 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:04:13 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_toupper(int c)
+#include <ctype.h>
+
+int	ft_isdigit(int c)
 {
-	if(c <= 122 && c >= 97)
+	if(c >= 48 && c <= 57)
 	{
-		return c - 32;
+		return 1;
 	}
 	else
 	{
-		return c;
+		return 0;
 	}
 }
-

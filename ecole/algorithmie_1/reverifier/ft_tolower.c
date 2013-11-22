@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:08:04 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 14:55:38 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 12:05:57 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:35:24 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+#include <ctype.h>
 
-int		ft_strcmp(const char *s1,const char *s2)
+int	ft_tolower(int c)
 {
-	int	i;
-	int	value_s1;
-	int	value_s2;
-
-	i = 0;
-	value_s1 = 0;
-	value_s2 = 0;
-
-	while(s1[i] == s2[i] && s2[i] != '\0' )
+	if(c <= 90 && c >= 65)
 	{
-		i++;
-	}
-	if (s2[i] == '\0')
-	{
-		return (0);
+		return c + 32;
 	}
 	else
 	{
-	return (s1[i] - s2[i]);
+		return c;
 	}
 }

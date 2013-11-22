@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:08:04 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 14:55:38 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 13:11:41 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:15:18 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
+void	ft_putchar(char c);
 
-int		ft_strcmp(const char *s1,const char *s2)
+void	ft_putnbr(int n)
 {
-	int	i;
-	int	value_s1;
-	int	value_s2;
-
-	i = 0;
-	value_s1 = 0;
-	value_s2 = 0;
-
-	while(s1[i] == s2[i] && s2[i] != '\0' )
+	if(n >= 0)
 	{
-		i++;
-	}
-	if (s2[i] == '\0')
-	{
-		return (0);
+		if(n >= 10)
+		{
+			ft_putnbr(n / 10);
+			ft_putchar(n % 10 + '0');
+		}
+		else
+		{
+			ft_putchar('0' + n);
+		}
 	}
 	else
 	{
-	return (s1[i] - s2[i]);
+		ft_putchar('-');
+		ft_putnbr(-n);
 	}
 }

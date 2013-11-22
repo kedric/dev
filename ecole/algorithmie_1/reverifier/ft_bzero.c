@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:06:51 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 12:07:10 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/22 08:52:04 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 13:55:34 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalpha(int c)
+#include <strings.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-	if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	int i;
+	char *str;
+
+	i = 0;
+	if (s != 0 && n > 0)
 	{
-		return 1;
-	}
-	else
-	{
-		return 0;
+		str = (char*)s;
+		while(i < n)
+		{
+			*((char *)s+i) = '\0';
+			i++;
+		}
 	}
 }

@@ -6,26 +6,26 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 12:09:35 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 14:59:09 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/22 12:33:13 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-char	*ft_strncpy(char *dest, char *src, size_t n)
+char	*ft_strncpy(char *s1, char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 
-	while( src[i] != '\0')
+	while( s2[i] != '\0')
 	{
-		dest[i] = src[i];
+		s1[i] = s2[i];
 		i++;
 	}
 	while(i <= n)
 	{
-		dest[i] = '\0';
+		s1[i] = '\0';
 		i++;
 	}
-	return dest;
+	return s1;
 }

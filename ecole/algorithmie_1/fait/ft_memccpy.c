@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:13:02 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 14:50:36 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/22 15:50:20 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 19:03:04 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-char	*ft_strcpy(char *s1, const char *s2)
+void    *ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	int	i;
+    size_t i;
 
-	i = 0;
-
-	while (s2[i] != '\0')
+    i = 0;
+	if (s1 && s2 && c && n)
 	{
-		s1[i] = s2[i];
+		while(i < n)
+		{
+			*((char *)s1 + i) = *((char *)s2 + i);
+			if (*((char *)s2 + i) == (char)c)
+			{
+				return ((char *)s1 + i + 1);
+			}
 		i++;
+		}
 	}
-
-	s1[i] = '\0';
-
-	return (s1);
+	return (NULL);
 }

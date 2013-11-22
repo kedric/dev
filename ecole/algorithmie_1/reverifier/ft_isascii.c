@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 12:04:59 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/20 15:28:44 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/20 12:11:48 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/22 12:03:10 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int		ft_strlen(char *str)
+#include <ctype.h>
+
+int	ft_isascii(int c)
 {
-	int	i;
-
-	i = 0;
-
-	while(str[i] != '\0')
+	if(c >= 0 && c <= 127)
 	{
-		i++;
+		return 1;
 	}
-	return (i);
+	else
+	{
+		return 0;
+	}
 }
