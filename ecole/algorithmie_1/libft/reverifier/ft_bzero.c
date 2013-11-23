@@ -6,14 +6,14 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 08:52:04 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 13:55:34 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 14:14:50 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <strings.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	int i;
+	size_t i;
 	char *str;
 
 	i = 0;

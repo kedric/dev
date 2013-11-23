@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 20:41:35 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/23 14:19:31 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/23 14:34:07 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/23 14:41:40 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-int     ft_strncmp(const char *s1,const char *s2, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
-    size_t i;
+	int i;
 
-    i = 0;
-
-    while(((s1[i] != '\0') && (i < n)) || ((s2[i] != '\0') && (i < n)))
+    if (s)
     {
-        if (s1[i] > s2[i])
-            return (1);
-        if (s1[i] < s2[i])
-            return (-1);
-        i++;
+		i = ft_strlen(s) + 1;
+
+        while (i > 0)
+        {
+            if (s[i] == (char)c)
+                return ((char *)s + i);
+            i--;
+        }
+        if (s[i] == (char)c)
+            return ((char *)s + i);
     }
-    return (0);
+    return(0);
 }
