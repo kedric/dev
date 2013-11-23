@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2013/11/23 13:37:30 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 13:42:28 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1223,7 +1223,7 @@ int					main(int argc, const char **argv)
 	uf_add_test(test, "\033[33misprint\033[0m", uf_test_isprint);
 	uf_add_test(test, "\033[33mtoupper\033[0m", uf_test_toupper);
 	uf_add_test(test, "\033[33mtolower\033[0m", uf_test_tolower);
-	uf_add_test(test, "memalloc_del", uf_test_memalloc_and_del);
+//	uf_add_test(test, "memalloc_del", uf_test_memalloc_and_del);
 //	uf_add_test(test, "strnew", uf_test_strnew);
 //	uf_add_test(test, "strdel", uf_test_strdel);
 //	uf_add_test(test, "strclr", uf_test_strclr);
@@ -1238,7 +1238,7 @@ int					main(int argc, const char **argv)
 //	uf_add_test(test, "strsplit", uf_test_strsplit);
 //	uf_add_test(test, "itoa", uf_test_itoa);
 //	uf_add_test(test, "strtrim", uf_test_strtrim);
-*/
+
 	while (i < D_TEST && test[i].set == true)
 	{
 		printf("Test [%s] : ", test[i].name);
