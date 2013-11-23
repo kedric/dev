@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 20:41:35 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/23 10:21:33 by jmancero         ###   ########.fr       */
+/*   Created: 2013/11/23 10:26:56 by jmancero          #+#    #+#             */
+/*   Updated: 2013/11/23 10:33:50 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
-int     ft_strncmp(const char *s1,const char *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    int i;
+	int i;
 
     i = 0;
 
-    while(s1[i] != '\0' && i < n|| s2[i] != '\0' && i < n )
+    while(*((char *)s1 +i) != '\0' || *((char *)s2 + i) != '\0' )
     {
-        if (s1[i] > s2[i])
+        if (*((char *)s1 + i) > *((char *)s2 + i))
             return (1);
-        if (s1[i] < s2[i])
+        if (*((char *)s1 + i) < *((char *)s2 + i))
             return (-1);
         i++;
     }
