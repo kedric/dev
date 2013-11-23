@@ -13,6 +13,7 @@
 #include <time.h>
  
 #include "./reverifier/libft.h" /* compile with -I./ */
+size_t  strlcat(char *dst, const char *src, size_t size);
 #define D_ERROR { printf("Error Line %d, Funct %s ", __LINE__ - 1, __func__); return (0); }
  
 #define D_TEST  50
@@ -466,7 +467,7 @@ int             uf_test_atoi(void)
                 D_ERROR
 					return (1);
 }
- 
+*/ 
 int             uf_test_strncmp(void)
 {
 	if (strncmp("abc", "abc", 2) != ft_strncmp("abc", "abc", 2))
@@ -479,7 +480,7 @@ int             uf_test_strncmp(void)
                 D_ERROR
 					return (1);
 }
-*/ 
+
 int             uf_test_strcmp(void)
 {
 	if (strcmp("abc", "abc") != ft_strcmp("abc", "abc")){
@@ -563,7 +564,7 @@ int     uf_test_strchr(void)
                 D_ERROR
 					return (1);
 }
- 
+*/ 
 int     uf_test_strlcat(void)
 {
 	char    dest[50] = {0};
@@ -622,7 +623,7 @@ int     uf_test_strcat(void)
                 D_ERROR
 					return (1);
 }
-*/
+
 int     uf_test_strncpy(void)
 {
 	int     i;
@@ -678,7 +679,7 @@ int     uf_test_strcpy(void)
                 D_ERROR
 					return (1);
 }
-/* 
+ 
 int     uf_test_strdup(void)
 {
 	char    *ret1;
@@ -698,7 +699,7 @@ int     uf_test_strdup(void)
 	free(ret2);
 	return (1);
 }
-*/
+
 int     uf_test_strlen(void)
 {
 	if (strlen("") != ft_strlen(""))
@@ -743,7 +744,7 @@ int     uf_test_memchr(void)
                 D_ERROR
 					return (1);
 }
-/* 
+ 
 int     uf_test_memcmp(void)
 {
 	char    tab[11] = "Hello boys\0";
@@ -763,7 +764,7 @@ int     uf_test_memcmp(void)
                 D_ERROR
 					return (1);
 }
-*/ 
+ 
 int     uf_test_memccpy(void)
 {
 	char                    ctab[11], ctab2[11], ctab3[11];
@@ -975,20 +976,20 @@ int             main(int argc, const char **argv)
 	uf_add_test(test, "memccpy", uf_test_memccpy);
 	uf_add_test(test, "memmove", uf_test_memmove);
 	uf_add_test(test, "memchr", uf_test_memchr);
-//	uf_add_test(test, "memcmp", uf_test_memcmp);
+	uf_add_test(test, "memcmp", uf_test_memcmp);
 	uf_add_test(test, "strlen", uf_test_strlen);
-//	uf_add_test(test, "strdup", uf_test_strdup);
+	uf_add_test(test, "strdup", uf_test_strdup);
 	uf_add_test(test, "strcpy", uf_test_strcpy);
 	uf_add_test(test, "strncpy", uf_test_strncpy);
-//	uf_add_test(test, "strcat", uf_test_strcat);
-//	uf_add_test(test, "strncat", uf_test_strncat);
-//	uf_add_test(test, "strlcat", uf_test_strlcat);
+	uf_add_test(test, "strcat", uf_test_strcat);
+	uf_add_test(test, "strncat", uf_test_strncat);
+	uf_add_test(test, "strlcat", uf_test_strlcat);
 //	uf_add_test(test, "strchr", uf_test_strchr);
 //	uf_add_test(test, "strrchr", uf_test_strrchr);
 //	uf_add_test(test, "strstr", uf_test_strstr);
 //	uf_add_test(test, "strnstr", uf_test_strnstr);
 	uf_add_test(test, "strcmp", uf_test_strcmp);
-//	uf_add_test(test, "strncmp", uf_test_strncmp);
+	uf_add_test(test, "strncmp", uf_test_strncmp);
 //	uf_add_test(test, "atoi", uf_test_atoi);
 	uf_add_test(test, "alpha", uf_test_isalpha);
 	uf_add_test(test, "digit", uf_test_isdigit);
