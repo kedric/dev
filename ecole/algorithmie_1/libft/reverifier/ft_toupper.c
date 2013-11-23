@@ -6,7 +6,7 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 12:10:48 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 12:36:40 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 14:18:10 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <ctype.h>
@@ -15,11 +15,11 @@ int	ft_toupper(int c)
 {
 	if(c <= 122 && c >= 97)
 	{
-		return c - 32;
+		return (c - 32);
 	}
 	else
 	{
-		return c;
+		return (c);
 	}
 }
 

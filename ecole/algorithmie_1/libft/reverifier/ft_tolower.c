@@ -6,19 +6,19 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 12:05:57 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 12:35:24 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 13:44:17 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <ctype.h>
 
 int	ft_tolower(int c)
 {
-	if(c <= 90 && c >= 65)
+	if(c <= 90 && c >= 65 && c)
 	{
-		return c + 32;
+		return (c + 32);
 	}
 	else
 	{
-		return c;
+		return (c);
 	}
 }
