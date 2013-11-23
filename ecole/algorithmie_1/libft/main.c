@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2013/11/23 16:34:52 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 20:14:44 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -499,18 +499,20 @@ int				uf_test_strnew(void)
 	}
 	return (1);
 }
-
+*/
 int				uf_test_memalloc_and_del(void)
 {
 	void		*ret;
 
 	ret = ft_memalloc(4);
+	if(ret == NULL)
+		D_ERROR
 	ft_memdel(&ret);
 	if (ret != NULL)
 		D_ERROR
 	return (1);
 }
-*/
+
 int				uf_test_tolower(void)
 {
 	int			i;
@@ -609,13 +611,12 @@ int				uf_test_isalpha(void)
 	}
 	return (1);
 }
-/*
+
 int				uf_test_atoi(void)
 {
 	size_t		i, j;
 	char		str[12] = {0};
-
-	if (atoi("\n\v\t\r\f -123") != ft_atoi("\v\t\r\f-123"))
+	if (atoi("\n\v\t\r\f -123") != ft_atoi("\v\t\r\f -123"))
 		D_ERROR
 	if (atoi("12-3") != ft_atoi("12-3"))
 		D_ERROR
@@ -642,7 +643,7 @@ int				uf_test_atoi(void)
 	if (atoi("") != ft_atoi(""))
 		D_ERROR
 	i = 0;
-	while (i < RANDT * LONG)
+/*	while (i < RANDT * LONG)
 	{
 		j = 0;
 		while (j < 11)
@@ -650,13 +651,20 @@ int				uf_test_atoi(void)
 			str[j] = (char)rand();
 			j++;
 		}
+//		ft_putnbr(str[0]);
+//		ft_putstr(str);
+//		ft_putstr(" ft_atoi :");
+//		ft_putnbr(ft_atoi(str));
+//		ft_putstr(" atoi :");
+//		ft_putnbr(atoi(str));
+//		ft_putchar('\n');
 		if (atoi(str) != ft_atoi(str))
 			D_ERROR
 		i++;
-	}
-	return (1);
+		}
+*/	return (1);
 }
-*/
+
 int				uf_test_strncmp(void)
 {
 	if (strncmp("abc", "abc", 2) != ft_strncmp("abc", "abc", 2))
@@ -1222,7 +1230,7 @@ int					main(int argc, const char **argv)
 //	uf_add_test(test, "strnstr", uf_test_strnstr);
 	uf_add_test(test, "strcmp", uf_test_strcmp);
 	uf_add_test(test, "strncmp", uf_test_strncmp);
-//	uf_add_test(test, "\033[33matoi\033[0m", uf_test_atoi);
+	uf_add_test(test, "\033[33matoi\033[0m", uf_test_atoi);
 	uf_add_test(test, "\033[33malpha\033[0m", uf_test_isalpha);
 	uf_add_test(test, "\033[33mdigit\033[0m", uf_test_isdigit);
 	uf_add_test(test, "\033[33malnum\033[0m", uf_test_isalnum);
@@ -1230,7 +1238,7 @@ int					main(int argc, const char **argv)
 	uf_add_test(test, "\033[33misprint\033[0m", uf_test_isprint);
 	uf_add_test(test, "\033[33mtoupper\033[0m", uf_test_toupper);
 	uf_add_test(test, "\033[33mtolower\033[0m", uf_test_tolower);
-//	uf_add_test(test, "memalloc_del", uf_test_memalloc_and_del);
+	uf_add_test(test, "memalloc_del", uf_test_memalloc_and_del);
 //	uf_add_test(test, "strnew", uf_test_strnew);
 //	uf_add_test(test, "strdel", uf_test_strdel);
 //	uf_add_test(test, "strclr", uf_test_strclr);
