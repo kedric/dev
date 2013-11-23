@@ -532,7 +532,7 @@ int             uf_test_strstr(void)
                 D_ERROR
 					return (1);
 }
- 
+*/ 
 int     uf_test_strrchr(void)
 {
 	char    str[] = "Hello je tesx";
@@ -543,8 +543,10 @@ int     uf_test_strrchr(void)
                 D_ERROR
 					if (strrchr(str, 'x') != ft_strrchr(str, 'x'))
                 D_ERROR
-					if (strrchr(str, 0) != ft_strrchr(str, 0))
-                D_ERROR
+					if (strrchr(str, 0) != ft_strrchr(str, 0)){
+					ft_putstr(strrchr(str,0);
+					ft_putstr(strrchr(str,0);
+					D_ERROR}
 					return (1);
 }
  

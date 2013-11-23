@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2013/11/23 15:14:17 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 16:34:52 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -700,11 +700,13 @@ int				uf_test_strnstr(void)
 	return (1);
 }
 */
- /*
+
 int				uf_test_strstr(void)
 {
 	char		*str = "Hello les genw";
-
+//	ft_putstr(strstr(str, ""));
+//	ft_putstr("\n");
+//	ft_putstr(ft_strstr(str, ""));
 	if (strstr(str, "Hello") != ft_strstr(str, "Hello"))
 		D_ERROR
 	if (strstr(str, "les") != ft_strstr(str, "les"))
@@ -717,11 +719,12 @@ int				uf_test_strstr(void)
 		D_ERROR
 	return (1);
 }
- */
+
 int				uf_test_strrchr(void)
 {
 	char		str[] = "Hello je tesx";
-
+//		ft_putstr(strrchr(str,'e'));
+//		ft_putstr(ft_strrchr(str,'e'));
 	if (strrchr(str, 'H') != ft_strrchr(str, 'H')){
 		ft_putstr(ft_strrchr(str,'H'));
 		D_ERROR}
@@ -729,8 +732,10 @@ int				uf_test_strrchr(void)
 		D_ERROR
 	if (strrchr(str, 'x') != ft_strrchr(str, 'x'))
 		D_ERROR
-	if (strrchr(str, 0) != ft_strrchr(str, 0))
-		D_ERROR
+			if (strrchr(str, 0) != ft_strrchr(str, 0)){
+
+
+		D_ERROR}
 	return (1);
 }
 
@@ -1213,7 +1218,7 @@ int					main(int argc, const char **argv)
 //	uf_add_test(test, "strlcat", uf_test_strlcat);
 	uf_add_test(test, "strchr", uf_test_strchr);
 	uf_add_test(test, "strrchr", uf_test_strrchr);
-//	uf_add_test(test, "strstr", uf_test_strstr);
+	uf_add_test(test, "strstr", uf_test_strstr);
 //	uf_add_test(test, "strnstr", uf_test_strnstr);
 	uf_add_test(test, "strcmp", uf_test_strcmp);
 	uf_add_test(test, "strncmp", uf_test_strncmp);
