@@ -564,12 +564,12 @@ int     uf_test_strchr(void)
                 D_ERROR
 					return (1);
 }
-*/ 
+*//*
 int     uf_test_strlcat(void)
 {
-	char    dest[50] = {0};
-	char    dest2[50] = {0};
- 
+	char            dest[50] = {0};
+	char            dest2[50] = {0};
+	size_t          i;
  
 	if (strlcat(dest, "Hello ", 4) != ft_strlcat(dest2, "Hello ", 4))
                 D_ERROR
@@ -583,9 +583,20 @@ int     uf_test_strlcat(void)
 	ft_strlcat(dest2, "Hello ", 1);
 	if (strcmp(dest, dest2) != 0)
                 D_ERROR
-					return (1);
+					i = 0;
+	while (i < 6)
+	{
+		dest[4 + i] = 'z';
+		dest2[4 + i] = 'z';
+		++i;
+	}
+	strlcat(dest, "abc", 6);
+    ft_strlcat(dest2, "abc", 6);
+    if (strcmp(dest, dest2) != 0)
+        D_ERROR
+			return (1);
 }
- 
+ */
 int     uf_test_strncat(void)
 {
 	char    dest[50] = {0};
@@ -983,7 +994,7 @@ int             main(int argc, const char **argv)
 	uf_add_test(test, "strncpy", uf_test_strncpy);
 	uf_add_test(test, "strcat", uf_test_strcat);
 	uf_add_test(test, "strncat", uf_test_strncat);
-	uf_add_test(test, "strlcat", uf_test_strlcat);
+//	uf_add_test(test, "strlcat", uf_test_strlcat);
 //	uf_add_test(test, "strchr", uf_test_strchr);
 //	uf_add_test(test, "strrchr", uf_test_strrchr);
 //	uf_add_test(test, "strstr", uf_test_strstr);

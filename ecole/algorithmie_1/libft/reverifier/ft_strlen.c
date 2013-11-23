@@ -6,7 +6,7 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 12:04:59 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/22 12:30:33 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/23 13:16:07 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -16,10 +16,13 @@ int		ft_strlen(char *s)
 	int	i;
 
 	i = 0;
-
-	while(s[i] != '\0')
+	if (s != 0)
 	{
-		i++;
+		while(s[i] != '\0')
+		{
+			i++;
+		}
+		return (i);
 	}
 	return (i);
 }
