@@ -6,7 +6,7 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/23 16:40:40 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/23 19:03:31 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/24 19:15:51 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -19,8 +19,8 @@ int ft_atoi(const char *nptr)
 	i[1] = 0;
 	i[2] = 1;
 
-	while(nptr[i[0]] <= 13 && nptr[i[0]] >= 9 || nptr[i[0]] == '\n' 
-		  || nptr[i[0]] == 32 || nptr[i[0]] == 43)
+	while(nptr[i[0]] <= 13 && nptr[i[0]] >= 9 || nptr[i[0]] == 32 
+		  || nptr[i[0]] == 43)
 		i[0]++;
 	if (nptr[i[0]] == '-')
 	{

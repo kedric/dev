@@ -6,23 +6,21 @@
 /*   By: jmancero <jmancero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 21:39:28 by jmancero          #+#    #+#             */
-/*   Updated: 2013/11/23 00:16:55 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/24 19:49:12 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
+	const unsigned char *str;
 
-	i = 0;
-	while(i <= n)
+	str = s;
+	while(n-- > 0)
 	{
-		if( *((char *)s + i) == c)
-		{
-			return((char*)s + i );
-		}
-		i++;
+		if (*str == c)
+			return((void *)str);
+		str++;
 	}
-	return(NULL);
+	return (NULL);
 }
