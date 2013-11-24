@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2013/11/24 00:06:10 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/24 10:31:38 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,7 +232,7 @@ int				uf_test_strjoin(void)
     free(ret);
 	return (1);
 }
-
+*/
 int				uf_test_strsub(void)
 {
 	char		*ret;
@@ -269,7 +269,7 @@ char			uf_strmapi_callback(unsigned int i, char s)
 {
 	return (s + i);
 }
-
+/*
 int				uf_test_itoa(void)
 {
 	char		*ret;
@@ -315,7 +315,7 @@ int				uf_test_itoa(void)
 	free(ret);
 	return (1);
 }
-
+*/
 int				uf_test_strnequ(void)
 {
 	int			ret;
@@ -450,7 +450,7 @@ int				uf_test_striter(void)
 		D_ERROR
 	return (1);
 }
-*/
+
 int				uf_test_strclr(void)
 {
 	int			i;
@@ -1242,13 +1242,13 @@ int					main(int argc, const char **argv)
 	uf_add_test(test, "strnew", uf_test_strnew);
 	uf_add_test(test, "strdel", uf_test_strdel);
 	uf_add_test(test, "strclr", uf_test_strclr);
-//	uf_add_test(test, "striter", uf_test_striter);
-//	uf_add_test(test, "striteri", uf_test_striteri);
-//	uf_add_test(test, "strmap", uf_test_strmap);
-//	uf_add_test(test, "strmapi", uf_test_strmapi);
-//	uf_add_test(test, "strequ", uf_test_strequ);
-//	uf_add_test(test, "strnequ", uf_test_strnequ);
-//	uf_add_test(test, "strsub", uf_test_strsub);
+	uf_add_test(test, "striter", uf_test_striter);
+	uf_add_test(test, "striteri", uf_test_striteri);
+	uf_add_test(test, "strmap", uf_test_strmap);
+	uf_add_test(test, "strmapi", uf_test_strmapi);
+	uf_add_test(test, "strequ", uf_test_strequ);
+	uf_add_test(test, "strnequ", uf_test_strnequ);
+	uf_add_test(test, "strsub", uf_test_strsub);
 //	uf_add_test(test, "strjoin", uf_test_strjoin);
 //	uf_add_test(test, "strsplit", uf_test_strsplit);
 //	uf_add_test(test, "itoa", uf_test_itoa);

@@ -32,11 +32,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *s1, const char *s2);
-//char	*strstr(const char *s1, const char *s2);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
+void	ft_striter(char *s, void (*f)(char *));
+char    *ft_strmap(char const *s, char (*f)(char));
+void    ft_striteri(char *s, void (*f)(unsigned int,char *));
+char	*ft_strmapi(char const *s, char (*f)(unsigned in, char));
+int		ft_strequ(char const *s1,char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
 #endif
