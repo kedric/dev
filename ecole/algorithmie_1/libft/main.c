@@ -6,7 +6,7 @@
 /*   By: student@42 <@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:43:06 by student@42        #+#    #+#             */
-/*   Updated: 2013/11/23 20:14:44 by jmancero         ###   ########.fr       */
+/*   Updated: 2013/11/24 00:06:10 by jmancero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -450,7 +450,7 @@ int				uf_test_striter(void)
 		D_ERROR
 	return (1);
 }
-
+*/
 int				uf_test_strclr(void)
 {
 	int			i;
@@ -499,7 +499,7 @@ int				uf_test_strnew(void)
 	}
 	return (1);
 }
-*/
+
 int				uf_test_memalloc_and_del(void)
 {
 	void		*ret;
@@ -1239,9 +1239,9 @@ int					main(int argc, const char **argv)
 	uf_add_test(test, "\033[33mtoupper\033[0m", uf_test_toupper);
 	uf_add_test(test, "\033[33mtolower\033[0m", uf_test_tolower);
 	uf_add_test(test, "memalloc_del", uf_test_memalloc_and_del);
-//	uf_add_test(test, "strnew", uf_test_strnew);
-//	uf_add_test(test, "strdel", uf_test_strdel);
-//	uf_add_test(test, "strclr", uf_test_strclr);
+	uf_add_test(test, "strnew", uf_test_strnew);
+	uf_add_test(test, "strdel", uf_test_strdel);
+	uf_add_test(test, "strclr", uf_test_strclr);
 //	uf_add_test(test, "striter", uf_test_striter);
 //	uf_add_test(test, "striteri", uf_test_striteri);
 //	uf_add_test(test, "strmap", uf_test_strmap);
